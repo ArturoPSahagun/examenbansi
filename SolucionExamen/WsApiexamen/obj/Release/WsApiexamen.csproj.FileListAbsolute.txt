@@ -1,0 +1,12 @@
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\bin\WsApiexamen.dll.config
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\bin\WsApiexamen.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\bin\WsApiexamen.pdb
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\bin\EntityFramework.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\bin\EntityFramework.SqlServer.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\bin\EntityFramework.xml
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\bin\EntityFramework.SqlServer.xml
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\obj\Release\WsApiexamen.csproj.AssemblyReference.cache
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\obj\Release\WsApiexamen.csproj.CoreCompileInputs.cache
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\obj\Release\WsApiexamen.csproj.CopyComplete
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\obj\Release\WsApiexamen.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\WsApiexamen\obj\Release\WsApiexamen.pdb

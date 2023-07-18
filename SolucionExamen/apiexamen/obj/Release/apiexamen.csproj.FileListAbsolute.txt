@@ -1,0 +1,14 @@
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\obj\Release\apiexamen.csproj.AssemblyReference.cache
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\obj\Release\apiexamen.csproj.CoreCompileInputs.cache
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\Model1.Context.tt
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\Model1.Context.cs
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\apiexamen.dll.config
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\apiexamen.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\apiexamen.pdb
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\EntityFramework.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\EntityFramework.xml
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\obj\Release\apiexamen.csproj.CopyComplete
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\obj\Release\apiexamen.dll
+C:\Users\Arturo\Desktop\examen bansi\repo\SolucionExamen\apiexamen\obj\Release\apiexamen.pdb

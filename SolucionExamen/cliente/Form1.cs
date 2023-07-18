@@ -20,7 +20,7 @@ namespace cliente
 
         private void AgregarBoton_Click(object sender, EventArgs e)
         {
-            string msj = CLSExamen.AgregarExamen(AgregarNombreInput.Text, AgregarDescripcionInput.Text);
+            string msj = CLSExamen.AgregarExamen(AgregarNombreInput.Text, AgregarDescripcionInput.Text, ComboMetodo.Text);
             MessageBox.Show(msj);
             AgregarNombreInput.Text = "";
             AgregarDescripcionInput.Text = "";
@@ -54,5 +54,6 @@ namespace cliente
 
 
         }
+
     }
 }

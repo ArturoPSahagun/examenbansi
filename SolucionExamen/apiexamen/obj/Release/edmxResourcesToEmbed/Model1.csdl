@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BdiExamenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BdiExamenEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spActualizar" ReturnType="Collection(BdiExamenModel.spActualizar_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spAgregar" ReturnType="Collection(BdiExamenModel.spAgregar_Result)">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spConsultar" ReturnType="Collection(BdiExamenModel.spConsultar_Result)">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spEliminar" ReturnType="Collection(BdiExamenModel.spEliminar_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spActualizar_Result">
+    <Property Type="Int32" Name="codigo_retorno" Nullable="false" />
+    <Property Type="String" Name="mensaje_retorno" Nullable="false" MaxLength="37" />
+  </ComplexType>
+  <ComplexType Name="spAgregar_Result">
+    <Property Type="Int32" Name="codigo_retorno" Nullable="false" />
+    <Property Type="String" Name="mensaje_retorno" Nullable="false" MaxLength="37" />
+  </ComplexType>
+  <ComplexType Name="spConsultar_Result">
+    <Property Type="Int32" Name="idExamen" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="spEliminar_Result">
+    <Property Type="Int32" Name="codigo_retorno" Nullable="false" />
+    <Property Type="String" Name="mensaje_retorno" Nullable="false" MaxLength="37" />
+  </ComplexType>
+</Schema>

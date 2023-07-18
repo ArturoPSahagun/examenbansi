@@ -33,6 +33,8 @@
             this.AgregarBoton = new System.Windows.Forms.Button();
             this.AgregarTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ComboMetodo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -44,19 +46,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.EliminarIdInput = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.EliminarBoton = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.EliminarIdInput = new System.Windows.Forms.TextBox();
-            this.ConsultarNombreInput = new System.Windows.Forms.TextBox();
-            this.ConsultarDescripcionInput = new System.Windows.Forms.TextBox();
-            this.label777 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.ConsultarBoton = new System.Windows.Forms.Button();
             this.ConsultarGrid = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsultarBoton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label777 = new System.Windows.Forms.Label();
+            this.ConsultarDescripcionInput = new System.Windows.Forms.TextBox();
+            this.ConsultarNombreInput = new System.Windows.Forms.TextBox();
             this.AgregarTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,7 +83,7 @@
             // 
             // AgregarBoton
             // 
-            this.AgregarBoton.Location = new System.Drawing.Point(121, 78);
+            this.AgregarBoton.Location = new System.Drawing.Point(121, 115);
             this.AgregarBoton.Name = "AgregarBoton";
             this.AgregarBoton.Size = new System.Drawing.Size(75, 23);
             this.AgregarBoton.TabIndex = 2;
@@ -95,10 +97,10 @@
             this.AgregarTab.Controls.Add(this.tabPage2);
             this.AgregarTab.Controls.Add(this.tabPage3);
             this.AgregarTab.Controls.Add(this.tabPage4);
-            this.AgregarTab.Location = new System.Drawing.Point(2, 12);
+            this.AgregarTab.Location = new System.Drawing.Point(2, 69);
             this.AgregarTab.Name = "AgregarTab";
             this.AgregarTab.SelectedIndex = 0;
-            this.AgregarTab.Size = new System.Drawing.Size(380, 437);
+            this.AgregarTab.Size = new System.Drawing.Size(380, 380);
             this.AgregarTab.TabIndex = 3;
             // 
             // tabPage1
@@ -111,10 +113,31 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(372, 411);
+            this.tabPage1.Size = new System.Drawing.Size(372, 354);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Agregar";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(58, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Metodo";
+            // 
+            // ComboMetodo
+            // 
+            this.ComboMetodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboMetodo.FormattingEnabled = true;
+            this.ComboMetodo.Items.AddRange(new object[] {
+            "Stored Procedure",
+            "Web Service"});
+            this.ComboMetodo.Location = new System.Drawing.Point(107, 29);
+            this.ComboMetodo.Name = "ComboMetodo";
+            this.ComboMetodo.Size = new System.Drawing.Size(121, 21);
+            this.ComboMetodo.TabIndex = 5;
             // 
             // label2
             // 
@@ -221,6 +244,13 @@
             this.tabPage3.Text = "Eliminar";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // EliminarIdInput
+            // 
+            this.EliminarIdInput.Location = new System.Drawing.Point(126, 55);
+            this.EliminarIdInput.Name = "EliminarIdInput";
+            this.EliminarIdInput.Size = new System.Drawing.Size(100, 20);
+            this.EliminarIdInput.TabIndex = 2;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -255,55 +285,6 @@
             this.tabPage4.Text = "Consultar";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // EliminarIdInput
-            // 
-            this.EliminarIdInput.Location = new System.Drawing.Point(126, 55);
-            this.EliminarIdInput.Name = "EliminarIdInput";
-            this.EliminarIdInput.Size = new System.Drawing.Size(100, 20);
-            this.EliminarIdInput.TabIndex = 2;
-            // 
-            // ConsultarNombreInput
-            // 
-            this.ConsultarNombreInput.Location = new System.Drawing.Point(166, 31);
-            this.ConsultarNombreInput.Name = "ConsultarNombreInput";
-            this.ConsultarNombreInput.Size = new System.Drawing.Size(100, 20);
-            this.ConsultarNombreInput.TabIndex = 0;
-            // 
-            // ConsultarDescripcionInput
-            // 
-            this.ConsultarDescripcionInput.Location = new System.Drawing.Point(166, 72);
-            this.ConsultarDescripcionInput.Name = "ConsultarDescripcionInput";
-            this.ConsultarDescripcionInput.Size = new System.Drawing.Size(100, 20);
-            this.ConsultarDescripcionInput.TabIndex = 1;
-            // 
-            // label777
-            // 
-            this.label777.AutoSize = true;
-            this.label777.Location = new System.Drawing.Point(103, 37);
-            this.label777.Name = "label777";
-            this.label777.Size = new System.Drawing.Size(44, 13);
-            this.label777.TabIndex = 2;
-            this.label777.Text = "Nombre";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(84, 75);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Descripcion";
-            // 
-            // ConsultarBoton
-            // 
-            this.ConsultarBoton.Location = new System.Drawing.Point(289, 69);
-            this.ConsultarBoton.Name = "ConsultarBoton";
-            this.ConsultarBoton.Size = new System.Drawing.Size(75, 23);
-            this.ConsultarBoton.TabIndex = 4;
-            this.ConsultarBoton.Text = "Consultar";
-            this.ConsultarBoton.UseVisualStyleBackColor = true;
-            this.ConsultarBoton.Click += new System.EventHandler(this.ConsultarBoton_Click);
-            // 
             // ConsultarGrid
             // 
             this.ConsultarGrid.AllowUserToAddRows = false;
@@ -337,14 +318,58 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
             // 
+            // ConsultarBoton
+            // 
+            this.ConsultarBoton.Location = new System.Drawing.Point(289, 69);
+            this.ConsultarBoton.Name = "ConsultarBoton";
+            this.ConsultarBoton.Size = new System.Drawing.Size(75, 23);
+            this.ConsultarBoton.TabIndex = 4;
+            this.ConsultarBoton.Text = "Consultar";
+            this.ConsultarBoton.UseVisualStyleBackColor = true;
+            this.ConsultarBoton.Click += new System.EventHandler(this.ConsultarBoton_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(84, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Descripcion";
+            // 
+            // label777
+            // 
+            this.label777.AutoSize = true;
+            this.label777.Location = new System.Drawing.Point(103, 37);
+            this.label777.Name = "label777";
+            this.label777.Size = new System.Drawing.Size(44, 13);
+            this.label777.TabIndex = 2;
+            this.label777.Text = "Nombre";
+            // 
+            // ConsultarDescripcionInput
+            // 
+            this.ConsultarDescripcionInput.Location = new System.Drawing.Point(166, 72);
+            this.ConsultarDescripcionInput.Name = "ConsultarDescripcionInput";
+            this.ConsultarDescripcionInput.Size = new System.Drawing.Size(100, 20);
+            this.ConsultarDescripcionInput.TabIndex = 1;
+            // 
+            // ConsultarNombreInput
+            // 
+            this.ConsultarNombreInput.Location = new System.Drawing.Point(166, 31);
+            this.ConsultarNombreInput.Name = "ConsultarNombreInput";
+            this.ConsultarNombreInput.Size = new System.Drawing.Size(100, 20);
+            this.ConsultarNombreInput.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 450);
+            this.Controls.Add(this.ComboMetodo);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.AgregarTab);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Examen";
             this.AgregarTab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -356,6 +381,7 @@
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultarGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -390,6 +416,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox ComboMetodo;
     }
 }
 

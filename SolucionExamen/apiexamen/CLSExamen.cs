@@ -10,14 +10,28 @@ namespace apiexamen
 {
     public class CLSExamen
     {
-        public static string AgregarExamen(string Nombre, string Descripcion)
+        public static string AgregarExamen(string Nombre, string Descripcion, string Metodo)
         {
-            using (BdiExamenEntities db = new BdiExamenEntities())
+            if (Metodo == "Stored Procedure")
             {
-                var resultado = db.spAgregar(Nombre, Descripcion).ToList();
-                var primero = resultado.First();
-                string msj = string.Format("Codigo : {0} \nMensaje : {1}", primero.codigo_retorno, primero.mensaje_retorno);
+                using (BdiExamenEntities db = new BdiExamenEntities())
+                {
+                    var resultado = db.spAgregar(Nombre, Descripcion).ToList();
+                    var primero = resultado.First();
+                    string msj = string.Format("Codigo : {0} \nMensaje : {1}", primero.codigo_retorno, primero.mensaje_retorno);
+                    return msj;
+                }
+            }
+            else if(Metodo == "Web Service")
+            {
+                ServiceReference2.ExamenServClient servicio = new ServiceReference2.ExamenServClient();
+                var retorno = servicio.AgregarExamen(Nombre, Descripcion);
+                string msj = string.Format("Codigo : {0} \nMensaje : {1}", retorno.Respuesta, retorno.Mensaje);
                 return msj;
+            }
+            else
+            {
+                return "Metodo no valido";
             }
         }
         public static string ActualizarExamen(string Id, string Nombre, string Descripcion)
