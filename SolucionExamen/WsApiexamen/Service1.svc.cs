@@ -80,34 +80,16 @@ namespace WsApiexamen
                     return new Retorno(false, e.Message);
                 }
             }
-
-
-
-
-
-
         }
 
-
-
-
-
-
-
-
-
-
-
-        public IEnumerable<tblExamen> Consultar()
+        public IEnumerable<tblExamen> ConsultarExamen(string Nombre, string Descripcion)
         {
-            using(BdiExamenEntities db = new BdiExamenEntities()) { 
-            
-                return db.tblExamen.AsNoTracking().ToList();
-            
-            
+            using (BdiExamenEntities db = new BdiExamenEntities())
+            {
+                List<tblExamen> Rows = db.tblExamen.Where(r => r.Nombre == Nombre || r.Descripcion == Descripcion).ToList();
+                return Rows;
             }
         }
-
 
     }
 }

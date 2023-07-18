@@ -15,9 +15,6 @@ namespace WsApiexamen
     {
 
         [OperationContract]
-        IEnumerable<tblExamen> Consultar();
-
-        [OperationContract]
         Retorno AgregarExamen(string Nombre, string Descripcion);
 
         [OperationContract]
@@ -25,6 +22,9 @@ namespace WsApiexamen
 
         [OperationContract]
         Retorno EliminarExamen(int Id);
+
+        [OperationContract]
+        IEnumerable<tblExamen> ConsultarExamen(string Nombre, string Descripcion);
 
 
     }
