@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -34,7 +35,7 @@ namespace apiexamen
                 return "Metodo no valido";
             }
         }
-        public static string ActualizarExamen(string Id, string Nombre, string Descripcion)
+        public static string ActualizarExamen(string Id, string Nombre, string Descripcion, string Metodo)
         {
             int IdInt;
             //validacion
@@ -46,15 +47,30 @@ namespace apiexamen
             {
                 return "La Id ingresada no es un numero";
             }
-            using (BdiExamenEntities db = new BdiExamenEntities())
+            if (Metodo == "Stored Procedure")
             {
-                var resultado = db.spActualizar(IdInt, Nombre, Descripcion).ToList();
-                var primero = resultado.First();
-                string msj = string.Format("Codigo : {0} \nMensaje : {1}", primero.codigo_retorno, primero.mensaje_retorno);
+                using (BdiExamenEntities db = new BdiExamenEntities())
+                {
+                    var resultado = db.spActualizar(IdInt, Nombre, Descripcion).ToList();
+                    var primero = resultado.First();
+                    string msj = string.Format("Codigo : {0} \nMensaje : {1}", primero.codigo_retorno, primero.mensaje_retorno);
+                    return msj;
+                }
+            }
+            else if (Metodo == "Web Service")
+            {
+                ServiceReference1.ExamenServClient servicio = new ServiceReference1.ExamenServClient();
+                var retorno = servicio.ActualizarExamen(IdInt, Nombre, Descripcion);
+                string msj = string.Format("Codigo : {0} \nMensaje : {1}", retorno.Respuesta, retorno.Mensaje);
                 return msj;
             }
+            else
+            {
+                return "Metodo no valido";
+            }
+
         }
-        public static string EliminarExamen(string Id)
+        public static string EliminarExamen(string Id, string Metodo)
         {
             int IdInt;
             //validacion
@@ -66,26 +82,58 @@ namespace apiexamen
             {
                 return "La Id ingresada no es un numero";
             }
-            using (BdiExamenEntities db = new BdiExamenEntities())
+            if (Metodo == "Stored Procedure")
             {
-                var resultado = db.spEliminar(IdInt).ToList();
-                var primero = resultado.First();
-                string msj = string.Format("Codigo : {0} \nMensaje : {1}", primero.codigo_retorno, primero.mensaje_retorno);
+                using (BdiExamenEntities db = new BdiExamenEntities())
+                {
+                    var resultado = db.spEliminar(IdInt).ToList();
+                    var primero = resultado.First();
+                    string msj = string.Format("Codigo : {0} \nMensaje : {1}", primero.codigo_retorno, primero.mensaje_retorno);
+                    return msj;
+                }
+            }
+            else if (Metodo == "Web Service")
+            {
+                ServiceReference1.ExamenServClient servicio = new ServiceReference1.ExamenServClient();
+                var retorno = servicio.EliminarExamen(IdInt);
+                string msj = string.Format("Codigo : {0} \nMensaje : {1}", retorno.Respuesta, retorno.Mensaje);
                 return msj;
+            }
+            else
+            {
+                return "Metodo no valido";
             }
         }
 
-        public static List<Examen> ConsultarExamen(string Nombre, string Descripcion)
+        public static List<Examen> ConsultarExamen(string Nombre, string Descripcion, string Metodo)
         {
-            using (BdiExamenEntities db = new BdiExamenEntities())
+            List<Examen> senddata = new List<Examen>();
+
+            if (Metodo == "Stored Procedure")
             {
-                var resultado = db.spConsultar(Nombre, Descripcion).ToList();
-                List<Examen> senddata = new List<Examen>();
-                foreach (var item in resultado)
+                using (BdiExamenEntities db = new BdiExamenEntities())
+                {
+                    var resultado = db.spConsultar(Nombre, Descripcion).ToList();
+                    foreach (var item in resultado)
+                    {
+                        senddata.Add(new Examen(item.idExamen, item.Nombre, item.Descripcion));
+                    }
+                    return senddata;
+                }
+            }
+            else if (Metodo == "Web Service")
+            {
+                ServiceReference1.ExamenServClient servicio = new ServiceReference1.ExamenServClient();
+                var retorno = servicio.ConsultarExamen(Nombre, Descripcion);
+                foreach (var item in retorno)
                 {
                     senddata.Add(new Examen(item.idExamen, item.Nombre, item.Descripcion));
                 }
                 return senddata;
+            }
+            else
+            {
+                return null;
             }
         }
 

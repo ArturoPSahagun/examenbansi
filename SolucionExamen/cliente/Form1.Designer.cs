@@ -33,8 +33,6 @@
             this.AgregarBoton = new System.Windows.Forms.Button();
             this.AgregarTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label8 = new System.Windows.Forms.Label();
-            this.ComboMetodo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -59,6 +57,8 @@
             this.label777 = new System.Windows.Forms.Label();
             this.ConsultarDescripcionInput = new System.Windows.Forms.TextBox();
             this.ConsultarNombreInput = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ComboMetodo = new System.Windows.Forms.ComboBox();
             this.AgregarTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -118,27 +118,6 @@
             this.tabPage1.Text = "Agregar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(58, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Metodo";
-            // 
-            // ComboMetodo
-            // 
-            this.ComboMetodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboMetodo.FormattingEnabled = true;
-            this.ComboMetodo.Items.AddRange(new object[] {
-            "Stored Procedure",
-            "Web Service"});
-            this.ComboMetodo.Location = new System.Drawing.Point(107, 29);
-            this.ComboMetodo.Name = "ComboMetodo";
-            this.ComboMetodo.Size = new System.Drawing.Size(121, 21);
-            this.ComboMetodo.TabIndex = 5;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -169,7 +148,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(372, 411);
+            this.tabPage2.Size = new System.Drawing.Size(372, 354);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Actualizar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -239,7 +218,7 @@
             this.tabPage3.Controls.Add(this.EliminarBoton);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(372, 411);
+            this.tabPage3.Size = new System.Drawing.Size(372, 354);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Eliminar";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -280,7 +259,7 @@
             this.tabPage4.Controls.Add(this.ConsultarNombreInput);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(372, 411);
+            this.tabPage4.Size = new System.Drawing.Size(372, 354);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Consultar";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -297,7 +276,7 @@
             this.ConsultarGrid.Location = new System.Drawing.Point(-4, 158);
             this.ConsultarGrid.Name = "ConsultarGrid";
             this.ConsultarGrid.ReadOnly = true;
-            this.ConsultarGrid.Size = new System.Drawing.Size(373, 250);
+            this.ConsultarGrid.Size = new System.Drawing.Size(373, 189);
             this.ConsultarGrid.TabIndex = 5;
             // 
             // Id
@@ -359,6 +338,27 @@
             this.ConsultarNombreInput.Name = "ConsultarNombreInput";
             this.ConsultarNombreInput.Size = new System.Drawing.Size(100, 20);
             this.ConsultarNombreInput.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(58, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Metodo";
+            // 
+            // ComboMetodo
+            // 
+            this.ComboMetodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboMetodo.FormattingEnabled = true;
+            this.ComboMetodo.Items.AddRange(new object[] {
+            "Stored Procedure",
+            "Web Service"});
+            this.ComboMetodo.Location = new System.Drawing.Point(107, 29);
+            this.ComboMetodo.Name = "ComboMetodo";
+            this.ComboMetodo.Size = new System.Drawing.Size(121, 21);
+            this.ComboMetodo.TabIndex = 5;
             // 
             // Form1
             // 

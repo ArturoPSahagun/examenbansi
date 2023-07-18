@@ -28,7 +28,7 @@ namespace cliente
 
         private void ActualizarBoton_Click(object sender, EventArgs e)
         {
-            string msj = CLSExamen.ActualizarExamen(ActualizarIdInput.Text, ActualizarNombreInput.Text, ActualizarDescripcionInput.Text);
+            string msj = CLSExamen.ActualizarExamen(ActualizarIdInput.Text, ActualizarNombreInput.Text, ActualizarDescripcionInput.Text, ComboMetodo.Text);
             MessageBox.Show(msj);
             ActualizarIdInput.Text = "";
             ActualizarNombreInput.Text = "";
@@ -37,14 +37,14 @@ namespace cliente
 
         private void EliminarBoton_Click(object sender, EventArgs e)
         {
-            string msj = CLSExamen.EliminarExamen(EliminarIdInput.Text);
+            string msj = CLSExamen.EliminarExamen(EliminarIdInput.Text, ComboMetodo.Text);
             MessageBox.Show(msj);
             EliminarIdInput.Text = "";
         }
 
         private void ConsultarBoton_Click(object sender, EventArgs e)
         {
-            List<Examen> data = CLSExamen.ConsultarExamen(ConsultarNombreInput.Text, ConsultarDescripcionInput.Text);
+            List<Examen> data = CLSExamen.ConsultarExamen(ConsultarNombreInput.Text, ConsultarDescripcionInput.Text, ComboMetodo.Text);
             ConsultarGrid.Rows.Clear();
             foreach (var item in data)
             {
