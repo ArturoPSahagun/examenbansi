@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BdiExamenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="spActualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spAgregar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spConsultar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spEliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="BdiExamenModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BdiExamenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BdiExamenEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spActualizar" ReturnType="Collection(BdiExamenModel.spActualizar_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spAgregar" ReturnType="Collection(BdiExamenModel.spAgregar_Result)">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spConsultar" ReturnType="Collection(BdiExamenModel.spConsultar_Result)">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spEliminar" ReturnType="Collection(BdiExamenModel.spEliminar_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spActualizar_Result">
+          <Property Type="Int32" Name="codigo_retorno" Nullable="false" />
+          <Property Type="String" Name="mensaje_retorno" Nullable="false" MaxLength="37" />
+        </ComplexType>
+        <ComplexType Name="spAgregar_Result">
+          <Property Type="Int32" Name="codigo_retorno" Nullable="false" />
+          <Property Type="String" Name="mensaje_retorno" Nullable="false" MaxLength="37" />
+        </ComplexType>
+        <ComplexType Name="spConsultar_Result">
+          <Property Type="Int32" Name="idExamen" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="spEliminar_Result">
+          <Property Type="Int32" Name="codigo_retorno" Nullable="false" />
+          <Property Type="String" Name="mensaje_retorno" Nullable="false" MaxLength="37" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BdiExamenModelStoreContainer" CdmEntityContainer="BdiExamenEntities" >
+          <FunctionImportMapping FunctionImportName="spActualizar" FunctionName="BdiExamenModel.Store.spActualizar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdiExamenModel.spActualizar_Result">
+                <ScalarProperty Name="codigo_retorno" ColumnName="codigo_retorno" />
+                <ScalarProperty Name="mensaje_retorno" ColumnName="mensaje_retorno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spAgregar" FunctionName="BdiExamenModel.Store.spAgregar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdiExamenModel.spAgregar_Result">
+                <ScalarProperty Name="codigo_retorno" ColumnName="codigo_retorno" />
+                <ScalarProperty Name="mensaje_retorno" ColumnName="mensaje_retorno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spConsultar" FunctionName="BdiExamenModel.Store.spConsultar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdiExamenModel.spConsultar_Result">
+                <ScalarProperty Name="idExamen" ColumnName="idExamen" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spEliminar" FunctionName="BdiExamenModel.Store.spEliminar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BdiExamenModel.spEliminar_Result">
+                <ScalarProperty Name="codigo_retorno" ColumnName="codigo_retorno" />
+                <ScalarProperty Name="mensaje_retorno" ColumnName="mensaje_retorno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

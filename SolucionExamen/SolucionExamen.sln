@@ -5,6 +5,10 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsApiexamen", "WsApiexamen\WsApiexamen.csproj", "{D324F6B8-2A52-42A4-898D-4BFE65D1237D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiexamen", "apiexamen\apiexamen.csproj", "{46E35DCA-34DD-4E4F-9D65-7DC4BF90EAA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cliente", "cliente\cliente.csproj", "{E7C79FED-50D9-4534-BE25-7DDDAF303442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D324F6B8-2A52-42A4-898D-4BFE65D1237D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D324F6B8-2A52-42A4-898D-4BFE65D1237D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D324F6B8-2A52-42A4-898D-4BFE65D1237D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E35DCA-34DD-4E4F-9D65-7DC4BF90EAA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E35DCA-34DD-4E4F-9D65-7DC4BF90EAA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E35DCA-34DD-4E4F-9D65-7DC4BF90EAA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E35DCA-34DD-4E4F-9D65-7DC4BF90EAA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C79FED-50D9-4534-BE25-7DDDAF303442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C79FED-50D9-4534-BE25-7DDDAF303442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C79FED-50D9-4534-BE25-7DDDAF303442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C79FED-50D9-4534-BE25-7DDDAF303442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

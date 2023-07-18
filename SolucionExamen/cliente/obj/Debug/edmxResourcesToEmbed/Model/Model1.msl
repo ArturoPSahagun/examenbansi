@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BdiExamenModelStoreContainer" CdmEntityContainer="BdiExamenEntities1">
+    <FunctionImportMapping FunctionImportName="spActualizar" FunctionName="BdiExamenModel.Store.spActualizar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BdiExamenModel.spActualizar_Result">
+          <ScalarProperty Name="codigo_retorno" ColumnName="codigo_retorno" />
+          <ScalarProperty Name="mensaje_retorno" ColumnName="mensaje_retorno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAgregar" FunctionName="BdiExamenModel.Store.spAgregar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BdiExamenModel.spAgregar_Result">
+          <ScalarProperty Name="codigo_retorno" ColumnName="codigo_retorno" />
+          <ScalarProperty Name="mensaje_retorno" ColumnName="mensaje_retorno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultar" FunctionName="BdiExamenModel.Store.spConsultar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BdiExamenModel.spConsultar_Result">
+          <ScalarProperty Name="idExamen" ColumnName="idExamen" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spEliminar" FunctionName="BdiExamenModel.Store.spEliminar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BdiExamenModel.spEliminar_Result">
+          <ScalarProperty Name="codigo_retorno" ColumnName="codigo_retorno" />
+          <ScalarProperty Name="mensaje_retorno" ColumnName="mensaje_retorno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
