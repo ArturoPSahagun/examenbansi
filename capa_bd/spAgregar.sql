@@ -6,7 +6,9 @@ BEGIN
 	BEGIN TRY
 		INSERT INTO tblExamen(Nombre, Descripcion)
 		VALUES (@nombre, @desc);
-		SELECT 0 AS codigo_retorno;
+		SELECT 
+            0 AS codigo_retorno,
+            “Registro insertado satisfactoriamente” AS mensaje_retorno;
 	END TRY
 	BEGIN CATCH
 		SELECT  
