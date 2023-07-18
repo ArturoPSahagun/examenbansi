@@ -11,6 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiexamen", "apiexamen\apie
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cliente", "cliente\cliente.csproj", "{E7C79FED-50D9-4534-BE25-7DDDAF303442}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D324F6B8-2A52-42A4-898D-4BFE65D1237D} = {D324F6B8-2A52-42A4-898D-4BFE65D1237D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -24,7 +24,7 @@ namespace apiexamen
             }
             else if(Metodo == "Web Service")
             {
-                ServiceReference2.ExamenServClient servicio = new ServiceReference2.ExamenServClient();
+                ServiceReference1.ExamenServClient servicio = new ServiceReference1.ExamenServClient();
                 var retorno = servicio.AgregarExamen(Nombre, Descripcion);
                 string msj = string.Format("Codigo : {0} \nMensaje : {1}", retorno.Respuesta, retorno.Mensaje);
                 return msj;
