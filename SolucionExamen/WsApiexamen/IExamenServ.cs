@@ -16,10 +16,15 @@ namespace WsApiexamen
 
         [OperationContract]
         IEnumerable<tblExamen> Consultar();
+
         [OperationContract]
         Retorno AgregarExamen(string Nombre, string Descripcion);
+
         [OperationContract]
         Retorno ActualizarExamen(int Id, string Nombre, string Descripcion);
+
+        [OperationContract]
+        Retorno EliminarExamen(int Id);
 
 
     }

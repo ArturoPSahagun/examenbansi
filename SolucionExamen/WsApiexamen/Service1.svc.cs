@@ -26,7 +26,7 @@ namespace WsApiexamen
                     nuevo.Descripcion = Descripcion;
                     db.tblExamen.Add(nuevo);
                     db.SaveChanges();
-                    return new Retorno(true, "");
+                    return new Retorno(true);
                 }
                 catch (Exception e)
                 {
@@ -50,7 +50,7 @@ namespace WsApiexamen
                     objetivo.Descripcion = Descripcion;
                     db.Entry(objetivo).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                    return new Retorno(true, "");
+                    return new Retorno(true);
                 }
                 catch (Exception e)
                 {
@@ -58,6 +58,44 @@ namespace WsApiexamen
                 }
             }
         }
+
+        public Retorno EliminarExamen(int Id)
+        {
+            using (BdiExamenEntities db = new BdiExamenEntities())
+            {
+                try
+                {
+                    tblExamen objetivo = db.tblExamen.Find(Id);
+                    if (objetivo == null)
+                    {
+                        return new Retorno(false, "No hay registro con ese ID");
+                    }
+                    db.tblExamen.Remove(objetivo);
+                    db.Entry(objetivo).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                    return new Retorno(true);
+                }
+                catch (Exception e)
+                {
+                    return new Retorno(false, e.Message);
+                }
+            }
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
 
 
         public IEnumerable<tblExamen> Consultar()
@@ -69,5 +107,7 @@ namespace WsApiexamen
             
             }
         }
+
+
     }
 }

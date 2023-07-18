@@ -28,5 +28,9 @@ namespace WsApiexamen.Modelo
             Res = res;
             Msj = mensaje;
         }
+        public Retorno(bool res)
+        {
+            Res=res;
+        }
     }
 }
