@@ -13,6 +13,11 @@ namespace apiexamen
     {
         public static string AgregarExamen(string Nombre, string Descripcion, string Metodo)
         {
+            //validacion
+            if(Nombre == null || Nombre == "" || Descripcion == null || Descripcion == "")
+            {
+                return "No se pueden insertar valores vacios";
+            }
             if (Metodo == "Stored Procedure")
             {
                 using (BdiExamenEntities db = new BdiExamenEntities())
@@ -46,6 +51,10 @@ namespace apiexamen
             catch
             {
                 return "La Id ingresada no es un numero";
+            }
+            if (Nombre == null || Nombre == "" || Descripcion == null || Descripcion == "")
+            {
+                return "No se pueden insertar valores vacios";
             }
             if (Metodo == "Stored Procedure")
             {
@@ -118,7 +127,6 @@ namespace apiexamen
                     {
                         senddata.Add(new Examen(item.idExamen, item.Nombre, item.Descripcion));
                     }
-                    return senddata;
                 }
             }
             else if (Metodo == "Web Service")
@@ -129,12 +137,8 @@ namespace apiexamen
                 {
                     senddata.Add(new Examen(item.idExamen, item.Nombre, item.Descripcion));
                 }
-                return senddata;
             }
-            else
-            {
-                return null;
-            }
+            return senddata;
         }
 
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AgregarNombreInput = new System.Windows.Forms.TextBox();
             this.AgregarDescripcionInput = new System.Windows.Forms.TextBox();
             this.AgregarBoton = new System.Windows.Forms.Button();
@@ -268,6 +269,8 @@
             // 
             this.ConsultarGrid.AllowUserToAddRows = false;
             this.ConsultarGrid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.ConsultarGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ConsultarGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultarGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
